@@ -28,7 +28,7 @@ const AppSettingsScreen = () => {
           Developer: Devcoda
         </Text>
       </View>
-      {/* Add settings options here */}
+      
     </SafeAreaView>
   );
 };

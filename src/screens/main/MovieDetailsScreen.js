@@ -95,7 +95,7 @@ const MovieDetailsScreen = ({ route, navigation }) => {
           resizeMode="cover"
         />
         <View className="p-4">
-          <View className="flex-row justify-between items-center mb-2"> {/* New View for title and favorite button */}
+          <View className="flex-row justify-between items-center mb-2"> 
             <Text className={`text-3xl font-bold ${isDarkTheme ? 'text-text-dark-primary' : 'text-text-light-primary'}`} style={{ flexShrink: 1 }}>
               {movie.title}
             </Text>

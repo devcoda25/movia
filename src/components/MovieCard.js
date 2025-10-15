@@ -19,7 +19,7 @@ const MovieCard = ({ movie, onPress }) => {
             className={`text-sm font-semibold ${isDarkTheme ? 'text-text-dark-primary' : 'text-text-light-primary'}`}
             numberOfLines={2}
           >
-            {/* Use the truncated title here */}
+            
             {displayTitle}
           </Text>
           {movie.year && (

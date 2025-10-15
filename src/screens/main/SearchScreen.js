@@ -75,7 +75,7 @@ const SearchScreen = ({ navigation }) => {
         />
 
         <View className="flex-row justify-between mb-4">
-          {/* Quality Filter */}
+          
           <View className={`flex-1 mr-2 border rounded-lg ${isDarkTheme ? 'border-text-dark-secondary' : 'border-text-light-secondary'}`}>
             <Picker
               selectedValue={selectedQuality}
@@ -89,7 +89,7 @@ const SearchScreen = ({ navigation }) => {
             </Picker>
           </View>
 
-          {/* Genre Filter */}
+          
           <View className={`flex-1 ml-2 border rounded-lg ${isDarkTheme ? 'border-text-dark-secondary' : 'border-text-light-secondary'}`}>
             <Picker
               selectedValue={selectedGenre}
@@ -104,7 +104,7 @@ const SearchScreen = ({ navigation }) => {
           </View>
         </View>
 
-        {/* Sort By Filter */}
+        
         <View className={`mb-4 border rounded-lg ${isDarkTheme ? 'border-text-dark-secondary' : 'border-text-light-secondary'}`}>
           <Picker
             selectedValue={selectedSortBy}
