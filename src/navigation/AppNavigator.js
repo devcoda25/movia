@@ -47,6 +47,7 @@ const FavoritesNavigator = () => { // New Navigator
   return (
     <FavoritesStack.Navigator screenOptions={{ headerShown: false }}>
       <FavoritesStack.Screen name="FavoritesMain" component={FavoritesScreen} />
+      <FavoritesStack.Screen name="MovieDetails" component={MovieDetailsScreen} />
     </FavoritesStack.Navigator>
   );
 };

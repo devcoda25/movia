@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
-import MovieCard from './MovieCard';
+import HorizontalMovieCard from './HoriMovieCard';
 import { useTheme } from '../hooks/useTheme';
 
 const HorizontalMovieList = ({ title, movies, onMoviePress }) => {
@@ -11,13 +11,14 @@ const HorizontalMovieList = ({ title, movies, onMoviePress }) => {
   }
 
   return (
-    <View className="mb-6">
+    <View className="mb-6 p-2 ">
       <Text className={`text-xl font-bold mb-3 px-4 ${isDarkTheme ? 'text-text-dark-primary' : 'text-text-light-primary'}`}>
         {title}
       </Text>
       <FlatList
         data={movies}
-        renderItem={({ item }) => <MovieCard movie={item} onPress={onMoviePress} />}
+        renderItem={({ item }) =>
+           <HorizontalMovieCard movie={item} onPress={onMoviePress} />}
         keyExtractor={(item) => String(item.id)}
         horizontal
         showsHorizontalScrollIndicator={false}
