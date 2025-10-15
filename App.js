@@ -66,7 +66,7 @@ export default function App() {
   return (
     <SafeAreaProvider>
       <ThemeProvider>
-        <FavoritesProvider> {/* Wrap AppContent with FavoritesProvider */}
+        <FavoritesProvider> 
           <AppContent />
         </FavoritesProvider>
       </ThemeProvider>
