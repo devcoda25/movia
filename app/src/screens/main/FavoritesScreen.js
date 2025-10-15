@@ -3,7 +3,7 @@ import { View, Text, FlatList } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useTheme } from '../../hooks/useTheme';
 import { useFavorites } from '../../hooks/useFavorites';
-import { getMovieDetails } from '../../api/yts';
+import { getMovieDetails } from '../../api/yts'; // Corrected import
 import LoadingSpinner from '../../components/LoadingSpinner';
 import MovieCard from '../../components/MovieCard';
 
@@ -29,7 +29,7 @@ const FavoritesScreen = ({ navigation }) => {
             return movieDetails;
           })
         );
-        setFavoriteMovies(movies.filter(Boolean)); 
+        setFavoriteMovies(movies.filter(Boolean)); // Filter out nulls
       } catch (error) {
         console.error('Failed to fetch favorite movie details:', error);
       } finally {

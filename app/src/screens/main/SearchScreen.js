@@ -16,7 +16,7 @@ const SearchScreen = ({ navigation }) => {
   const [loading, setLoading] = useState(false);
   const { isDarkTheme, colors } = useTheme();
 
-  
+  // Filter states
   const [selectedQuality, setSelectedQuality] = useState('all');
   const [selectedGenre, setSelectedGenre] = useState('all');
   const [selectedSortBy, setSelectedSortBy] = useState('date_added');

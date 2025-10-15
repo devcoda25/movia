@@ -1,5 +1,5 @@
-import { useFavorites } from '../../hooks/useFavorites'; 
-import Icon from 'react-native-vector-icons/FontAwesome'; 
+import { useFavorites } from '../../hooks/useFavorites'; // New import
+import Icon from 'react-native-vector-icons/FontAwesome'; // Already imported in AppNavigator, but good to be explicit here
 
 import React, { useEffect, useState } from 'react';
 import { View, Text, ScrollView, Image, TouchableOpacity, Linking, Alert } from 'react-native';
@@ -15,8 +15,8 @@ import HorizontalMovieList from '../../components/HorizontalMovieList';
 
 const MovieDetailsScreen = ({ route, navigation }) => {
   const { movieId } = route.params;
-  const { isDarkTheme, colors } = useTheme(); 
-  const { isFavorite, toggleFavorite } = useFavorites(); 
+  const { isDarkTheme, colors } = useTheme(); // Get colors for icon
+  const { isFavorite, toggleFavorite } = useFavorites(); // Use favorites hook
   const [movie, setMovie] = useState(null);
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(true);

@@ -4,17 +4,17 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useTheme } from '../hooks/useTheme';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
+// Main Screens
 import HomeScreen from '../screens/main/HomeScreen';
 import MovieDetailsScreen from '../screens/main/MovieDetailsScreen';
 import SearchScreen from '../screens/main/SearchScreen';
-import AppSettingsScreen from '../screens/main/AppSettingsScreen'; 
-import FavoritesScreen from '../screens/main/FavoritesScreen';   
+import AppSettingsScreen from '../screens/main/AppSettingsScreen'; // New Import
+import FavoritesScreen from '../screens/main/FavoritesScreen';   // New Import
 
 const HomeStack = createNativeStackNavigator();
 const SearchStack = createNativeStackNavigator();
-const AppSettingsStack = createNativeStackNavigator(); 
-const FavoritesStack = createNativeStackNavigator(); 
+const AppSettingsStack = createNativeStackNavigator(); // New Stack
+const FavoritesStack = createNativeStackNavigator(); // New Stack
 const Tab = createBottomTabNavigator();
 
 const HomeNavigator = () => {
@@ -35,7 +35,7 @@ const SearchNavigator = () => {
   );
 };
 
-const AppSettingsNavigator = () => { 
+const AppSettingsNavigator = () => { // New Navigator
   return (
     <AppSettingsStack.Navigator screenOptions={{ headerShown: false }}>
       <AppSettingsStack.Screen name="AppSettingsMain" component={AppSettingsScreen} />
@@ -43,7 +43,7 @@ const AppSettingsNavigator = () => {
   );
 };
 
-const FavoritesNavigator = () => { 
+const FavoritesNavigator = () => { // New Navigator
   return (
     <FavoritesStack.Navigator screenOptions={{ headerShown: false }}>
       <FavoritesStack.Screen name="FavoritesMain" component={FavoritesScreen} />
@@ -62,7 +62,7 @@ const MainTabNavigator = () => {
     tabBarStyle: {
       backgroundColor: isDarkTheme ? colors.surface : colors.surfaceLight,
       borderTopWidth: 0,
-      elevation: 0, 
+      elevation: 0, // Remove shadow on Android
     },
     tabBarLabelStyle: {
       fontFamily: 'Inter_500Medium',
@@ -93,22 +93,22 @@ const MainTabNavigator = () => {
         }}
       />
       <Tab.Screen
-        name="FavoritesTab" 
+        name="FavoritesTab" // New Tab
         component={FavoritesNavigator}
         options={{
           title: 'Favorites',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="heart" color={color} size={size} /> 
+            <Icon name="heart" color={color} size={size} /> // Using 'heart' icon for favorites
           ),
         }}
       />
       <Tab.Screen
-        name="AppSettingsTab"
+        name="AppSettingsTab" // New Tab
         component={AppSettingsNavigator}
         options={{
           title: 'Settings',
           tabBarIcon: ({ color, size }) => (
-            <Icon name="cog" color={color} size={size} />
+            <Icon name="cog" color={color} size={size} /> // Using 'cog' icon for settings
           ),
         }}
       />

@@ -7,7 +7,7 @@ const HorizontalMovieCard = ({ movie, onPress }) => {
   const { isDarkTheme } = useTheme();
   const imageUrl = movie.medium_cover_image || NoImage;
 
-  // Truncate the title to a maximum of 2 words
+  
   const displayTitle = movie.title.split(' ').slice(0, 2).join(' ');
 
   return (
