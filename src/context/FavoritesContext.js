@@ -42,8 +42,10 @@ export const FavoritesProvider = ({ children }) => {
   const isFavorite = (movieId) => favoriteMovieIds.includes(movieId);
 
   return (
-    <FavoritesContext.Provider value={{ favoriteMovieIds, toggleFavorite, isFavorite, loadingFavorites }}>
-      {children}
-    </FavoritesContext.Provider>
-  );
+  <FavoritesContext.Provider
+    value={{ favoriteMovieIds, toggleFavorite, isFavorite, loadingFavorites }}
+  >
+    {children}
+  </FavoritesContext.Provider>
+);
 };

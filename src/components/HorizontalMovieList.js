@@ -7,7 +7,7 @@ const HorizontalMovieList = ({ title, movies, onMoviePress }) => {
   const { isDarkTheme } = useTheme();
 
   if (!movies || movies.length === 0) {
-    return null; // Or a placeholder for no movies
+    return null;
   }
 
   return (

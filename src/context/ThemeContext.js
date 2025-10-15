@@ -5,8 +5,8 @@ import { colors as colorPalette } from '../constants/colors';
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const systemColorScheme = useColorScheme(); // 'dark' or 'light'
-  const [theme, setTheme] = useState(systemColorScheme || 'dark'); // Default to dark
+  const systemColorScheme = useColorScheme(); 
+  const [theme, setTheme] = useState(systemColorScheme || 'dark'); 
 
   useEffect(() => {
     setTheme(systemColorScheme || 'dark');

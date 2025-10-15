@@ -6,9 +6,9 @@ import { listMovies } from '../../api/yts';
 import LoadingSpinner from '../../components/LoadingSpinner';
 import MovieCard from '../../components/MovieCard';
 import { debounce } from 'lodash';
-import { Picker } from '@react-native-picker/picker'; // Import Picker
+import { Picker } from '@react-native-picker/picker'; 
 
-import { QUALITY_OPTIONS, GENRE_OPTIONS, SORT_BY_OPTIONS } from '../../constants/filterOptions'; // New import
+import { QUALITY_OPTIONS, GENRE_OPTIONS, SORT_BY_OPTIONS } from '../../constants/filterOptions'; 
 
 const SearchScreen = ({ navigation }) => {
   const [searchQuery, setSearchQuery] = useState('');
@@ -22,7 +22,7 @@ const SearchScreen = ({ navigation }) => {
   const [selectedSortBy, setSelectedSortBy] = useState('date_added');
 
   const fetchSearchResults = useCallback(debounce(async (query, quality, genre, sortBy) => {
-    if (query.trim() === '' && quality === 'all' && genre === 'all') { // Only search if there's a query or filter
+    if (query.trim() === '' && quality === 'all' && genre === 'all') {
       setSearchResults([]);
       return;
     }

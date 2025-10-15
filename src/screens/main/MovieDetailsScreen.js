@@ -42,7 +42,7 @@ const MovieDetailsScreen = ({ route, navigation }) => {
 
   const handleDownload = () => {
     if (movie && movie.torrents && movie.torrents.length > 0) {
-      const latestTorrent = movie.torrents[0]; // Get the first torrent, usually highest quality
+      const latestTorrent = movie.torrents[0]; 
       const magnetLink = constructMagnetLink(latestTorrent.hash, movie.title);
       if (magnetLink) {
         Linking.openURL(magnetLink)
@@ -83,7 +83,7 @@ const MovieDetailsScreen = ({ route, navigation }) => {
     );
   }
 
-  const favoriteIconName = isFavorite(movieId) ? 'heart' : 'heart-o'; // Filled heart if favorite, outline if not
+  const favoriteIconName = isFavorite(movieId) ? 'heart' : 'heart-o'; 
   const favoriteIconColor = isFavorite(movieId) ? colors.primary : (isDarkTheme ? colors.textPrimary : colors.textLightPrimary);
 
   return (

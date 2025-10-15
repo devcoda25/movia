@@ -99,7 +99,7 @@ const MainTabNavigator = () => {
           title: 'Favorites',
           tabBarIcon: ({ color, size }) => (
             <Icon name="heart" color={color} size={size} /> 
-          ),
+          )
         }}
       />
       <Tab.Screen
